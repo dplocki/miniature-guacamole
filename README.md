@@ -2,14 +2,20 @@
 
 The case study of [Gherkin](https://en.wikipedia.org/wiki/Cucumber_(software)#Gherkin_language) in [Python](https://en.wikipedia.org/wiki/Python_(programming_language)).
 
-## Setup
+## 🚪 Setup
 
 ```sh
 pip install pytest-bdd
 ```
 
-## Run
+## 👟 Run
 
 ```sh
 pytest
 ```
+
+## ✔️ Todo list
+
+* [x] Run feature file
+* [ ] Use `Background` in feature file
+
