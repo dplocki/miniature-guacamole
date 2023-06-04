@@ -1,4 +1,4 @@
-Feature: Adding two numbers
+Feature: Calculator tests
 
   Scenario: Adding two numbers
     Given calculator

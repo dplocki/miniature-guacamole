@@ -16,4 +16,4 @@ def when_add_number(context, a, b):
 
 @then(parsers.parse("result should be equal {result:d}"))
 def then_result_should_be_equal(context, result):
-    return context["result"] == result
+    assert context["result"] == result
