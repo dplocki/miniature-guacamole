@@ -21,6 +21,11 @@ def _(context: Dict, a: int, b: int) -> None:
     context["result"] = context["calculator"].sub(b, a)
 
 
+@when(parse("multiple number {a:d} and number {b:d}"))
+def _(context: Dict, a: int, b: int) -> None:
+    context["result"] = context["calculator"].mul(b, a)
+
+
 @then(parse("result should be equal {result:d}"))
 def _(context, result: int) -> None:
     assert context["result"] == result
