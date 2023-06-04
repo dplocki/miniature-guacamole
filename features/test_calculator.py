@@ -6,15 +6,20 @@ scenarios("test_calculator.feature")
 
 
 @given("calculator", target_fixture="context")
-def given_calculator():
+def _():
     return {"calculator": Calculator()}
 
 
 @when(parse("add number {a:d} to number {b:d}"))
-def when_add_number(context, a, b):
+def _(context, a, b):
     context["result"] = context["calculator"].add(a, b)
 
 
+@when(parse("sub number {a:d} from number {b:d}"))
+def _(context, a, b):
+    context["result"] = context["calculator"].sub(b, a)
+
+
 @then(parse("result should be equal {result:d}"))
-def then_result_should_be_equal(context, result):
+def _(context, result):
     assert context["result"] == result
