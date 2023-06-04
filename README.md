@@ -17,7 +17,7 @@ pytest
 ## ✔️ Todo list
 
 * [x] Run feature file
-* [ ] Add new test (generation)
-* [ ] Use `Background` in feature file
+* [x] Add new test (generation)
+* [x] Use `Background` in feature file
 * [ ] Use Docker for tests
 * [ ] Multiple containers for tests
