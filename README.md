@@ -7,3 +7,9 @@ The case study of [Gherkin](https://en.wikipedia.org/wiki/Cucumber_(software)#Gh
 ```sh
 pip install pytest-bdd
 ```
+
+## Run
+
+```sh
+pytest
+```
