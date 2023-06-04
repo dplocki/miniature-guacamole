@@ -18,4 +18,5 @@ pytest
 
 * [x] Run feature file
 * [ ] Use `Background` in feature file
-
+* [ ] Use Docker for tests
+* [ ] Multiple containers for tests
