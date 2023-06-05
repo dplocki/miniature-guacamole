@@ -14,6 +14,10 @@ pip install pytest-bdd
 pytest
 ```
 
+## 🗒️ Notes
+
+* pytest does not support the classes (steps as method, context as internal fields)
+
 ## 🔗 Links
 
 * [Cucumber.io](https://cucumber.io/)
