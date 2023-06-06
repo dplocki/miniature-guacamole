@@ -4,14 +4,77 @@ The case study of [Gherkin](https://en.wikipedia.org/wiki/Cucumber_(software)#Gh
 
 ## 🚪 Setup
 
+### pytest-bdd
+
+The plugin to `pytest` module.
+
 ```sh
 pip install pytest-bdd
 ```
 
+### behave
+
+```sh
+pip install behave
+```
+
 ## 👟 Run
+
+### pytest-bdd
 
 ```sh
 pytest
+```
+
+### behave
+
+```sh
+behave
+```
+
+## Report examples
+
+### 
+
+```txt
+============================================================================================== test session starts ==============================================================================================
+platform linux -- Python 3.10.6, pytest-7.3.1, pluggy-1.0.0
+rootdir: ~/github.com/dplocki/snake-eating-cucumbers
+plugins: bdd-6.1.1, anyio-3.6.2
+collected 3 items                                                                                                                                                                                               
+
+features/test_calculator_pytest_bdd.py ...                                                                                                                                                                [100%]
+
+=============================================================================================== 3 passed in 0.09s ===============================================================================================
+```
+
+
+### Behave
+
+```txt
+Feature: Calculator tests # features/test_calculator.feature:1
+
+  Background:   # features/test_calculator.feature:3
+
+  Scenario: Adding two numbers     # features/test_calculator.feature:6
+    Given calculator               # features/steps/test_calculator_bahave.py:5 0.000s
+    When add number 5 to number 10 # features/steps/test_calculator_bahave.py:10 0.000s
+    Then result should be equal 15 # features/steps/test_calculator_bahave.py:15 0.000s
+
+  Scenario: Substraction two numbers  # features/test_calculator.feature:10
+    Given calculator                  # features/steps/test_calculator_bahave.py:5 0.000s
+    When sub number 5 from number 8   # features/steps/test_calculator_bahave.py:20 0.000s
+    Then result should be equal 3     # features/steps/test_calculator_bahave.py:15 0.000s
+
+  Scenario: Multiple two numbers        # features/test_calculator.feature:14
+    Given calculator                    # features/steps/test_calculator_bahave.py:5 0.000s
+    When multiple number 4 and number 2 # features/steps/test_calculator_bahave.py:25 0.000s
+    Then result should be equal 8       # features/steps/test_calculator_bahave.py:15 0.000s
+
+1 feature passed, 0 failed, 0 skipped
+3 scenarios passed, 0 failed, 0 skipped
+9 steps passed, 0 failed, 0 skipped, 0 undefined
+Took 0m0.002s
 ```
 
 ## 🗒️ Notes
