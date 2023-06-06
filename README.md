@@ -2,9 +2,9 @@
 
 The case study of [Gherkin](https://en.wikipedia.org/wiki/Cucumber_(software)#Gherkin_language) in [Python](https://en.wikipedia.org/wiki/Python_(programming_language)).
 
-## 🚪 Setup
+## pytest-bdd
 
-### pytest-bdd
+### Setup
 
 The plugin to `pytest` module.
 
@@ -12,29 +12,14 @@ The plugin to `pytest` module.
 pip install pytest-bdd
 ```
 
-### behave
+### Run
 
-```sh
-pip install behave
-```
-
-## 👟 Run
-
-### pytest-bdd
 
 ```sh
 pytest
 ```
 
-### behave
-
-```sh
-behave
-```
-
-## Report examples
-
-### 
+### Report
 
 ```txt
 ============================================================================================== test session starts ==============================================================================================
@@ -48,8 +33,23 @@ features/test_calculator_pytest_bdd.py ...                                      
 =============================================================================================== 3 passed in 0.09s ===============================================================================================
 ```
 
+## behave
 
-### Behave
+Dedicated Python module for BDD tests.
+
+### Setup
+
+```sh
+pip install behave
+```
+
+###  Run
+
+```sh
+behave
+```
+
+### Report examples
 
 ```txt
 Feature: Calculator tests # features/test_calculator.feature:1
@@ -61,7 +61,7 @@ Feature: Calculator tests # features/test_calculator.feature:1
     When add number 5 to number 10 # features/steps/test_calculator_bahave.py:10 0.000s
     Then result should be equal 15 # features/steps/test_calculator_bahave.py:15 0.000s
 
-  Scenario: Substraction two numbers  # features/test_calculator.feature:10
+  Scenario: Subtraction two numbers  # features/test_calculator.feature:10
     Given calculator                  # features/steps/test_calculator_bahave.py:5 0.000s
     When sub number 5 from number 8   # features/steps/test_calculator_bahave.py:20 0.000s
     Then result should be equal 3     # features/steps/test_calculator_bahave.py:15 0.000s
@@ -81,6 +81,7 @@ Took 0m0.002s
 
 * functions don't have to unique names when decorators are used
 * pytest does not support the classes (steps as method, context as internal fields)
+* behave does require a directory structure
 
 ## 🔗 Links
 
