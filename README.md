@@ -16,6 +16,7 @@ pytest
 
 ## 🗒️ Notes
 
+* functions don't have to unique names when decorators are used
 * pytest does not support the classes (steps as method, context as internal fields)
 
 ## 🔗 Links
