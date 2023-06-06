@@ -7,7 +7,7 @@ Feature: Calculator tests
     When add number 5 to number 10
     Then result should be equal 15
 
-  Scenario: Substraction two numbers
+  Scenario: Subtraction two numbers
     When sub number 5 from number 8
     Then result should be equal 3
 
