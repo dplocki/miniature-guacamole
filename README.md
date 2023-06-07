@@ -9,17 +9,16 @@ The case study of [Gherkin](https://en.wikipedia.org/wiki/Cucumber_(software)#Gh
 The plugin to `pytest` module.
 
 ```sh
-pip install pytest-bdd
+pip3 install pytest-bdd
 ```
 
 ### Run
-
 
 ```sh
 pytest
 ```
 
-### Report
+### Report example
 
 ```txt
 ============================================================================================== test session starts ==============================================================================================
@@ -33,6 +32,10 @@ features/test_calculator_pytest_bdd.py ...                                      
 =============================================================================================== 3 passed in 0.09s ===============================================================================================
 ```
 
+### Notes
+
+* Pytest-bdd can generate the steps code
+
 ## behave
 
 Dedicated Python module for BDD tests.
@@ -40,16 +43,20 @@ Dedicated Python module for BDD tests.
 ### Setup
 
 ```sh
-pip install behave
+pip3 install behave
 ```
 
-###  Run
+### Run
 
 ```sh
 behave
 ```
 
-### Report examples
+### Notes
+
+* Behave can generate the steps code
+
+### Report example
 
 ```txt
 Feature: Calculator tests # features/test_calculator.feature:1
@@ -58,7 +65,7 @@ Feature: Calculator tests # features/test_calculator.feature:1
 
   Scenario: Adding two numbers     # features/test_calculator.feature:6
     Given calculator               # features/steps/test_calculator_bahave.py:5 0.000s
-    When add number 5 to number 10 # features/steps/test_calculator_bahave.py:10 0.000s
+    When add number 5 to numbsher 10 # features/steps/test_calculator_bahave.py:10 0.000s
     Then result should be equal 15 # features/steps/test_calculator_bahave.py:15 0.000s
 
   Scenario: Subtraction two numbers  # features/test_calculator.feature:10
@@ -77,6 +84,34 @@ Feature: Calculator tests # features/test_calculator.feature:1
 Took 0m0.002s
 ```
 
+## radish
+
+
+### Setup
+
+```sh
+pip3 install radish-bdd
+```
+
+Require (by default) existence of directory `~/radish` in order to work.
+
+### Run
+
+```sh
+radish features/
+```
+
+Where `features` is a directory with feature files.
+
+### Report example
+
+
+
+### Notes
+
+* the reason of the library itself:
+  > In addition to the standard gherkin language features which almost every BDD tool tries to implement radish implements uncommon but useful features like Scenario Loops, Scenario Preconditions and Variables.
+
 ## Others
 
 | Name                                         | Notes                                                         |
@@ -90,6 +125,25 @@ Took 0m0.002s
 * functions don't have to unique names when decorators are used
 * pytest does not support the classes (steps as method, context as internal fields)
 * behave does require a directory structure
+
+### Visual Code Support
+
+`Behave` and `pytest-bdd` can run with full debug support by following code in `lunch.json`:
+
+```json
+{
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "name": "Python: Module",
+            "type": "python",
+            "request": "launch",
+            "module": "behave",
+            "justMyCode": true
+        }
+    ]
+}
+```
 
 ## 🔗 Links
 
