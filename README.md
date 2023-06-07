@@ -77,6 +77,14 @@ Feature: Calculator tests # features/test_calculator.feature:1
 Took 0m0.002s
 ```
 
+## Others
+
+| Name                                         | Notes                                                         |
+|----------------------------------------------|---------------------------------------------------------------|
+| [lettuce](https://pypi.org/project/lettuce/) | Last version released in 2016, the project seem to be abandon |
+| [freshen](https://pypi.org/project/freshen/) | _This project is no longer maintained._                       |
+| [pyVows](https://pypi.org/project/pyVows/)   | Last version released in 2019                                 |
+
 ## 🗒️ Notes
 
 * functions don't have to unique names when decorators are used
