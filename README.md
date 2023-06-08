@@ -36,53 +36,16 @@ features/test_calculator_pytest_bdd.py ...                                      
 
 * Pytest-bdd can generate the steps code
 
-## behave
+## Behave
 
-Dedicated Python module for BDD tests.
-
-### Setup
+Build and run:
 
 ```sh
-pip3 install behave
+docker build -t sneak-eating-behaving -f behave/Dockerfile .
+docker run -t sneak-eating-behaving
 ```
 
-### Run
-
-```sh
-behave
-```
-
-### Notes
-
-* Behave can generate the steps code
-
-### Report example
-
-```txt
-Feature: Calculator tests # features/test_calculator.feature:1
-
-  Background:   # features/test_calculator.feature:3
-
-  Scenario: Adding two numbers     # features/test_calculator.feature:6
-    Given calculator               # features/steps/test_calculator_bahave.py:5 0.000s
-    When add number 5 to number 10 # features/steps/test_calculator_bahave.py:10 0.000s
-    Then result should be equal 15 # features/steps/test_calculator_bahave.py:15 0.000s
-
-  Scenario: Subtraction two numbers  # features/test_calculator.feature:10
-    Given calculator                  # features/steps/test_calculator_bahave.py:5 0.000s
-    When sub number 5 from number 8   # features/steps/test_calculator_bahave.py:20 0.000s
-    Then result should be equal 3     # features/steps/test_calculator_bahave.py:15 0.000s
-
-  Scenario: Multiple two numbers        # features/test_calculator.feature:14
-    Given calculator                    # features/steps/test_calculator_bahave.py:5 0.000s
-    When multiple number 4 and number 2 # features/steps/test_calculator_bahave.py:25 0.000s
-    Then result should be equal 8       # features/steps/test_calculator_bahave.py:15 0.000s
-
-1 feature passed, 0 failed, 0 skipped
-3 scenarios passed, 0 failed, 0 skipped
-9 steps passed, 0 failed, 0 skipped, 0 undefined
-Took 0m0.002s
-```
+More this library in the [Notes](./behave/NOTES.md).
 
 ## Radish
 

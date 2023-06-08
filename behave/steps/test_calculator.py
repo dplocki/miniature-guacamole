@@ -1,5 +1,3 @@
-# The example of behave
-
 from behave import given, when, then
 from calculator import Calculator
 
