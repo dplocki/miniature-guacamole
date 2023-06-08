@@ -1,5 +1,3 @@
-# The example of pytest-bdd
-
 from typing import Dict
 from calculator import Calculator
 from pytest_bdd import given, scenarios, then, when

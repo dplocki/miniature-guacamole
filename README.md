@@ -2,39 +2,16 @@
 
 The case study of [Gherkin](https://en.wikipedia.org/wiki/Cucumber_(software)#Gherkin_language) in [Python](https://en.wikipedia.org/wiki/Python_(programming_language)).
 
-## pytest-bdd
+## Pytest-bdd
 
-### Setup
-
-The plugin to `pytest` module.
+Build and run:
 
 ```sh
-pip3 install pytest-bdd
+docker build -t sneak-eating-normally -f pytest-bdd/Dockerfile .
+docker run -t sneak-eating-normally
 ```
 
-### Run
-
-```sh
-pytest
-```
-
-### Report example
-
-```txt
-============================================================================================== test session starts ==============================================================================================
-platform linux -- Python 3.10.6, pytest-7.3.1, pluggy-1.0.0
-rootdir: ~/github.com/dplocki/snake-eating-cucumbers
-plugins: bdd-6.1.1, anyio-3.6.2
-collected 3 items                                                                                                                                                                                               
-
-features/test_calculator_pytest_bdd.py ...                                                                                                                                                                [100%]
-
-=============================================================================================== 3 passed in 0.09s ===============================================================================================
-```
-
-### Notes
-
-* Pytest-bdd can generate the steps code
+More this library in the [Notes](./pytest-bdd/README.md).
 
 ## Behave
 
@@ -45,7 +22,7 @@ docker build -t sneak-eating-behaving -f behave/Dockerfile .
 docker run -t sneak-eating-behaving
 ```
 
-More this library in the [Notes](./behave/NOTES.md).
+More this library in the [Notes](./behave/README.md).
 
 ## Radish
 
@@ -56,7 +33,7 @@ docker build -t sneak-eating-radish -f radish/Dockerfile .
 docker run -t sneak-eating-radish
 ```
 
-More this library in the [Notes](./radish/NOTES.md).
+More this library in the [Notes](./radish/README.md).
 
 ## Others
 
