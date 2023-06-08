@@ -65,7 +65,7 @@ Feature: Calculator tests # features/test_calculator.feature:1
 
   Scenario: Adding two numbers     # features/test_calculator.feature:6
     Given calculator               # features/steps/test_calculator_bahave.py:5 0.000s
-    When add number 5 to numbsher 10 # features/steps/test_calculator_bahave.py:10 0.000s
+    When add number 5 to number 10 # features/steps/test_calculator_bahave.py:10 0.000s
     Then result should be equal 15 # features/steps/test_calculator_bahave.py:15 0.000s
 
   Scenario: Subtraction two numbers  # features/test_calculator.feature:10

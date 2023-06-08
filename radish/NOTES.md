@@ -1,6 +1,13 @@
-# radish
+# Radish
 
 > In addition to the standard gherkin language features which almost every BDD tool tries to implement radish implements uncommon but useful features like Scenario Loops, Scenario Preconditions and Variables.
+
+* [Documentation](https://radish.readthedocs.io/en/stable/index.html)
+* [Radish - the root from red to green](https://radish-bdd.github.io/)
+* [Source code](https://github.com/radish-bdd/radish)
+* [Package page](https://pypi.org/project/radish-bdd/)
+
+![Radish in action](./radish.example.png "Radish report")
 
 ## Setup
 
