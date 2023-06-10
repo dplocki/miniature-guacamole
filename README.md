@@ -1,5 +1,7 @@
 # 🥒🐍 Snake Eating Cucumbers
 
+![GitHub](https://img.shields.io/github/license/dplocki/snake-eating-cucumbers)
+
 The case study of [Gherkin](https://en.wikipedia.org/wiki/Cucumber_(software)#Gherkin_language) in [Python](https://en.wikipedia.org/wiki/Python_(programming_language)).
 
 ## 📚 Libraries
