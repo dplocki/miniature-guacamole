@@ -3,10 +3,10 @@ from calculator import Calculator
 
 
 @before.each_scenario
-def init_calculator(scenario):
+def _(scenario):
     scenario.context.calculator = Calculator()
 
 
 @after.each_scenario
-def destroy_calculator(scenario):
+def _(scenario):
     del scenario.context.calculator
