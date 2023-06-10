@@ -25,6 +25,7 @@ Where `features` is a directory with feature files.
 
 ## Notes
 
+* functions don't have to unique names when decorators are used
 * **radish** require (by default) existence of directory `~/radish` in order to work
 
 ## Report example
