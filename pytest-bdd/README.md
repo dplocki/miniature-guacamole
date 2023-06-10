@@ -1,5 +1,7 @@
 # pytest-bdd
 
+The plugin giving support of Gherkin language into standard unit tests library **python**.
+
 * [Documentation](https://pytest-bdd.readthedocs.io/en/stable/)
 * [Package page](https://pypi.org/project/pytest-bdd/)
 * [Source code](https://github.com/pytest-dev/pytest-bdd)
@@ -36,4 +38,27 @@ test_calculator.py ...                                                   [100%]
 
 ## Notes
 
-* Pytest-bdd can generate the steps code
+* functions don't have to unique names when decorators are used
+* **pytest-bdd** does not require special directory structure
+* **pytest-bdd** can generate the steps code
+* **pytest-bdd** does not support the classes (steps as method, context as internal fields)
+* the report is simple **pytest** report
+
+## Visual Code Support
+
+The `pytest-bdd` can run with full debug support by following code in `lunch.json`:
+
+```json
+{
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "name": "Python: Module",
+            "type": "python",
+            "request": "launch",
+            "module": "pytest",
+            "justMyCode": true
+        }
+    ]
+}
+```

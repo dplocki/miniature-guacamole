@@ -15,8 +15,6 @@
 pip install radish-bdd
 ```
 
-Require (by default) existence of directory `~/radish` in order to work.
-
 ## Run
 
 ```sh
@@ -24,6 +22,10 @@ radish features/
 ```
 
 Where `features` is a directory with feature files.
+
+## Notes
+
+* **radish** require (by default) existence of directory `~/radish` in order to work
 
 ## Report example
 
@@ -59,3 +61,28 @@ Feature: Calculator tests  # features/test_calculator.feature
 6 steps (6 passed)
 Run 1686168056 finished within a moment
 ```
+
+## Visual Studio support
+
+In case of `radish` it is more complicated, the library is not called as module. I improvised something like this:
+
+```json
+{
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "name": "Radish",
+            "type": "python",
+            "request": "launch",
+            "program": "/home/dplocki/.local/bin/radish",
+            "args": [ "features/"],
+            "console": "integratedTerminal",
+            "justMyCode": true
+        }
+    ]
+}
+```
+
+So for test to be able to load the module (`calculator` in my case) I have added the file `run.py`, which is a copy of the `~/.local/bin/radish`, but placed in the project root directory.
+
+For Docker sufficient is `CMD PYTHONPATH=. radish features/`.

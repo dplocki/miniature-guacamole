@@ -20,10 +20,6 @@ pip3 install behave
 behave
 ```
 
-## Notes
-
-* Behave can generate the steps code
-
 ## Report example
 
 ```txt
@@ -50,4 +46,29 @@ Feature: Calculator tests # features/test_calculator.feature:1
 3 scenarios passed, 0 failed, 0 skipped
 9 steps passed, 0 failed, 0 skipped, 0 undefined
 Took 0m0.002s
+```
+
+## Notes
+
+* functions don't have to unique names when decorators are used
+* **Behave** can generate the steps code
+* **Behave** does require a directory structure
+
+## Visual Code Support
+
+The `behave` can run with full debug support by following code in `lunch.json`:
+
+```json
+{
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "name": "Python: Module",
+            "type": "python",
+            "request": "launch",
+            "module": "behave",
+            "justMyCode": true
+        }
+    ]
+}
 ```
