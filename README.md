@@ -94,11 +94,3 @@ So for test to be able to load the module (`calculator` in my case) I have added
 ## 🔗 Links
 
 * [Cucumber.io](https://cucumber.io/)
-
-## ✔️ Todo list
-
-* [x] Run feature file
-* [x] Add new test (generation)
-* [x] Use `Background` in feature file
-* [x] Use Docker for tests
-* [ ] Multiple containers for tests
